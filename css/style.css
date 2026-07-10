@@ -33,7 +33,7 @@ a { text-decoration: none; color: inherit; }
 
 /* topbar */
 .topbar {
-    background: #000;
+    background:var(--gold);
     text-align: center;
     padding: 9px 0;
     font-size: .72rem;

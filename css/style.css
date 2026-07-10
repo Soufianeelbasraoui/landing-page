@@ -104,7 +104,6 @@ a { text-decoration: none; color: inherit; }
     width: 24px;
     height: 2.5px;
     background: var(--white);
-    border-radius: 5px;
     transition: .35s;
 }
 .burger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
@@ -135,7 +134,7 @@ a { text-decoration: none; color: inherit; }
     letter-spacing: .07em;
     text-transform: uppercase;
     padding: 15px 34px;
-    border-radius: 5px;
+
     border: none;
     cursor: pointer;
     transition: background .25s, transform .2s, box-shadow .25s;
@@ -253,7 +252,6 @@ a { text-decoration: none; color: inherit; }
     font-size: .82rem;
     letter-spacing: .12em;
     padding: 5px 22px;
-    border-radius: 5px;
     white-space: nowrap;
 }
 
@@ -332,7 +330,6 @@ a { text-decoration: none; color: inherit; }
 .icard {
     background: #fff;
     border: 1px solid #e2e2de;
-    border-radius: 5px;
     padding: 32px 28px;
     transition: transform .3s, box-shadow .3s, border-color .3s;
 }
@@ -426,7 +423,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .about-frame {
-    border-radius: 5px;
+  
     overflow: hidden;
     border: 4px solid var(--gold);
     box-shadow: 0 16px 40px rgba(0,0,0,.15);
@@ -466,7 +463,6 @@ a { text-decoration: none; color: inherit; }
 .scard {
     background: var(--dark2);
     border: 1px solid #2a2a2a;
-    border-radius: 5px;
     padding: 36px 32px 32px;
     position: relative;
     overflow: hidden;
@@ -541,9 +537,9 @@ a { text-decoration: none; color: inherit; }
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0,0,0,.55);
 }
-.dev-laptop { width: 72%; height: 58%; bottom: 0; left: 0; z-index: 1; border-radius: 5px; }
-.dev-tablet { width: 42%; height: 64%; bottom: 22px; right: 6%; z-index: 2; border-radius: 5px; }
-.dev-phone  { width: 21%; height: 52%; bottom: 0;  right: 0;  z-index: 3; border-radius: 5px; }
+.dev-laptop { width: 72%; height: 58%; bottom: 0; left: 0; z-index: 1; }
+.dev-tablet { width: 42%; height: 64%; bottom: 22px; right: 6%; z-index: 2; }
+.dev-phone  { width: 21%; height: 52%; bottom: 0;  right: 0;  z-index: 3;  }
 
 .dev-screen {
     width: 100%;
@@ -645,7 +641,7 @@ a { text-decoration: none; color: inherit; }
 .tcard {
     background: var(--dark2);
     border: 1px solid #242424;
-    border-radius: 5px;
+  
     padding: 40px 36px;
     text-align: center;
     transition: border-color .3s;

@@ -1,6 +1,6 @@
 $(function () {
 
-    // Gestion du défilement fluide
+
     $(document).on('click', 'a[href^="#"]', function (e) {
         var t = this.hash;
         if (!t || !$(t).length) return;
@@ -10,13 +10,11 @@ $(function () {
         $('html,body').animate({ scrollTop: $(t).offset().top - 68 }, 680);
     });
 
-    // Toggle menu mobile
     $('.burger').on('click', function () {
         $(this).toggleClass('open');
         $('.mob-nav').slideToggle(280);
     });
 
-    // Fermeture menu mobile au clic à l'extérieur
     $(document).on('click', function (e) {
         if (!$(e.target).closest('.nav, .mob-nav').length) {
             $('.mob-nav').slideUp(280);
@@ -24,7 +22,6 @@ $(function () {
         }
     });
 
-    // Ajout de la classe scrolled au scroll
     $(window).on('scroll', function () {
         $('.nav')[$(this).scrollTop() > 50 ? 'addClass' : 'removeClass']('scrolled');
     });
@@ -37,7 +34,6 @@ $(function () {
 });
 $(function () {
 
-    // Gestion du scroll reveal (apparition progressive)
     function reveal() {
         var wh = $(window).height();
         var st = $(window).scrollTop();
@@ -52,12 +48,9 @@ $(function () {
     reveal();
     $(window).on('scroll', reveal);
 
-    // Scrolled navbar style
     $(window).on('scroll', function () {
         $('.nav')[$(this).scrollTop() > 50 ? 'addClass' : 'removeClass']('scrolled');
     });
-
-    // Défilement fluide sur ancres
     $(document).on('click', 'a[href^="#"]', function (e) {
         var t = this.hash;
         if (!t || !$(t).length) return;
@@ -66,22 +59,17 @@ $(function () {
         $('.burger').removeClass('open');
         $('html,body').animate({ scrollTop: $(t).offset().top - 68 }, 680);
     });
-
-    // Toggle menu mobile
     $('.burger').on('click', function () {
         $(this).toggleClass('open');
         $('.mob-nav').slideToggle(280);
     });
 
-    // Fermeture menu mobile au clic à l'extérieur
     $(document).on('click', function (e) {
         if (!$(e.target).closest('.nav, .mob-nav').length) {
             $('.mob-nav').slideUp(280);
             $('.burger').removeClass('open');
         }
     });
-
-    // Gestion du Carousel (Témoignages)
     var cur = 0;
     var tot = $('.tslide').length;
 
@@ -98,13 +86,11 @@ $(function () {
         go(+$(this).data('i')); 
     });
 
-    // Auto défilement du carousel (5s)
     var auto = setInterval(function () { go(cur + 1); }, 5000);
     $(document).on('click', '.dot', function () { 
         clearInterval(auto); 
     });
 
-    // Swipe tactile sur mobile pour le carousel
     var tx = 0;
     $('.carousel-wrap')
         .on('touchstart', function (e) { tx = e.originalEvent.changedTouches[0].clientX; })
@@ -115,7 +101,6 @@ $(function () {
 
     go(0);
 
-    // Micro-animation boutons
     $(document).on('click', '.btn', function () {
         var $b = $(this).addClass('clicked');
         setTimeout(function () { $b.removeClass('clicked'); }, 280);
